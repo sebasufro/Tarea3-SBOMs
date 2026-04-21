@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Uso de IA para gestionar vulnerabilidades – ciberseguridad_2026</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-69125b1c4361f21872c413bbe4725061.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="Uso de IA para gestionar vulnerabilidades – ciberseguridad_2026">
+<meta property="og:description" content="Detección, adopción industrial y reparación automática">
+<meta property="og:site_name" content="ciberseguridad_2026">
+<meta name="twitter:title" content="Uso de IA para gestionar vulnerabilidades – ciberseguridad_2026">
+<meta name="twitter:description" content="Detección, adopción industrial y reparación automática">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-sidebar floating nav-fixed slimcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">ciberseguridad_2026</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools tools-end">
+</div>
+          <div id="quarto-search" class="" title="Buscar"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../vuln/introduccion_vulnerabilidades.html">Vulnerabilidades</a></li><li class="breadcrumb-item"><a href="../vuln/Uso_de_IA_para__gestionar_vulnerabilidades.html">Uso de IA para gestionar vulnerabilidades</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ciberseguridad_2026</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">SBOM</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sbom/introduccion_sboms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introducción SBOMs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sbom/SBOMS_en_la_actualidad.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SBOMs en la actualidad</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sbom/preguntas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preguntas sobre SBOMs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sbom/generacion_sbom.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Generación de SBOMs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sbom/explicacion_script_sbom.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Script detallado</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Vulnerabilidades</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../vuln/introduccion_vulnerabilidades.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introducción Vulnerabilidades</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../vuln/taxonomia_vulnerabilidades.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CVE, CWE, CVSS, NVD y MITRE ATT&amp;CK</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../vuln/caso_litellm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Caso de Estudio: LiteLLM y Cadena de Suministro</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../vuln/Uso_de_IA_para__gestionar_vulnerabilidades.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Uso de IA para gestionar vulnerabilidades</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../vuln/preguntas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preguntas sobre gestión de vulnerabilidades e IA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../vuln/generacion_codeql.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Análisis de Seguridad con CodeQL</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../vuln/explicacion_script_codeql.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CodeQL Script detallado</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../vuln/generacion_grype.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Análisis de Vulnerabilidades con Grype</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../vuln/explicacion_script_grype.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Grype Script Detallado</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#lecturas-base" id="toc-lecturas-base" class="nav-link active" data-scroll-target="#lecturas-base">Lecturas base</a></li>
+  <li><a href="#la-promesa" id="toc-la-promesa" class="nav-link" data-scroll-target="#la-promesa">La promesa</a></li>
+  <li><a href="#tensión-1.-detectar-no-es-generalizar" id="toc-tensión-1.-detectar-no-es-generalizar" class="nav-link" data-scroll-target="#tensión-1.-detectar-no-es-generalizar">Tensión 1. Detectar no es generalizar</a></li>
+  <li><a href="#tensión-2.-adoptar-no-es-confiar" id="toc-tensión-2.-adoptar-no-es-confiar" class="nav-link" data-scroll-target="#tensión-2.-adoptar-no-es-confiar">Tensión 2. Adoptar no es confiar</a></li>
+  <li><a href="#tensión-3.-reparar-no-es-producir-texto-parecido-a-un-parche" id="toc-tensión-3.-reparar-no-es-producir-texto-parecido-a-un-parche" class="nav-link" data-scroll-target="#tensión-3.-reparar-no-es-producir-texto-parecido-a-un-parche">Tensión 3. Reparar no es producir texto parecido a un parche</a></li>
+  <li><a href="#tensión-4.-los-datos-pueden-inflar-la-capacidad-aparente" id="toc-tensión-4.-los-datos-pueden-inflar-la-capacidad-aparente" class="nav-link" data-scroll-target="#tensión-4.-los-datos-pueden-inflar-la-capacidad-aparente">Tensión 4. Los datos pueden inflar la capacidad aparente</a></li>
+  <li><a href="#tensión-5.-la-ia-puede-ampliar-cobertura-y-también-ampliar-incertidumbre" id="toc-tensión-5.-la-ia-puede-ampliar-cobertura-y-también-ampliar-incertidumbre" class="nav-link" data-scroll-target="#tensión-5.-la-ia-puede-ampliar-cobertura-y-también-ampliar-incertidumbre">Tensión 5. La IA puede ampliar cobertura y también ampliar incertidumbre</a></li>
+  <li><a href="#tensión-6.-automatizar-exige-diseñar-responsabilidad" id="toc-tensión-6.-automatizar-exige-diseñar-responsabilidad" class="nav-link" data-scroll-target="#tensión-6.-automatizar-exige-diseñar-responsabilidad">Tensión 6. Automatizar exige diseñar responsabilidad</a></li>
+  <li><a href="#implicancias-para-leer-herramientas-de-ia" id="toc-implicancias-para-leer-herramientas-de-ia" class="nav-link" data-scroll-target="#implicancias-para-leer-herramientas-de-ia">Implicancias para leer herramientas de IA</a></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias">Referencias</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/dci-courses/ciberseguridad_2026/issues/new" class="toc-action"><i class="bi bi-github"></i>Informar sobre problema</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../vuln/introduccion_vulnerabilidades.html">Vulnerabilidades</a></li><li class="breadcrumb-item"><a href="../vuln/Uso_de_IA_para__gestionar_vulnerabilidades.html">Uso de IA para gestionar vulnerabilidades</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Uso de IA para gestionar vulnerabilidades</h1>
+<p class="subtitle lead">Detección, adopción industrial y reparación automática</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>La IA ya no aparece solo como una promesa distante para la seguridad de software. En la práctica, se usa para revisar código, priorizar hallazgos, explicar vulnerabilidades, sugerir parches y apoyar reportes. Esa amplitud puede hacer que el tema parezca resuelto. Si la herramienta detecta, explica y repara, entonces la gestión de vulnerabilidades podría volverse casi automática.</p>
+<p>Los tres artículos usados en esta lectura muestran una imagen más incómoda. La IA puede ayudar, pero su valor depende de cómo se entrena, cómo se evalúa, cómo se integra al trabajo real y cómo se valida lo que propone. La pregunta importante no es si la IA puede participar en la gestión de vulnerabilidades. La pregunta es bajo qué condiciones su participación reduce riesgo en vez de producir una confianza prematura.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Pregunta de partida">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Pregunta de partida
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>¿La IA está gestionando vulnerabilidades o está acelerando decisiones que todavía necesitan evidencia humana, técnica y organizacional?</p>
+</div>
+</div>
+<section id="lecturas-base" class="level2">
+<h2 class="anchored" data-anchor-id="lecturas-base">Lecturas base</h2>
+<p>Esta nota se apoya en tres artículos ubicados en <code>data/papers</code>.</p>
+<table class="caption-top table">
+<caption>Lecturas usadas como base del material.</caption>
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Archivo</th>
+<th>Foco del artículo</th>
+<th>Tensión que abre</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>paper_4.pdf</code></td>
+<td>Detección de vulnerabilidades con LLMs en las Top 25 CWE</td>
+<td>Un buen resultado dentro de distribución puede esconder mala generalización.</td>
+</tr>
+<tr class="even">
+<td><code>paper_5.pdf</code></td>
+<td>Uso industrial de IA en Software Vulnerability Management</td>
+<td>La adopción existe, pero confianza, contexto y gobierno siguen siendo problemas abiertos.</td>
+</tr>
+<tr class="odd">
+<td><code>paper_6.pdf</code></td>
+<td>Reparación automática de vulnerabilidades con modelos ajustados</td>
+<td>Un parche puede parecer correcto según una métrica y aun así no ser funcional o seguro.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="la-promesa" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="la-promesa">La promesa</h2>
+<p>La gestión de vulnerabilidades combina tareas técnicas y decisiones de proceso. Hay que encontrar fallas, evaluar severidad, priorizar, asignar responsables, corregir, probar, documentar y comunicar. En ese recorrido, la IA parece atractiva porque puede reducir trabajo repetitivo y aumentar cobertura.</p>
+<p>El estudio industrial de Kholoosi, Le y Babar (2026) muestra que esta promesa ya está entrando en los flujos reales de trabajo. De 60 practicantes encuestados en 27 países, 85% reporta algún uso de herramientas de IA para gestionar vulnerabilidades. Las herramientas aparecen en detección, evaluación, reparación y divulgación. Sin embargo, el mismo estudio muestra que la IA no reemplaza las prácticas existentes. Las herramientas de análisis estático y la revisión manual siguen siendo más frecuentes que las herramientas de IA.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><strong>Idea para leer con lupa</strong></p>
+<p>La IA no entra a un vacío. Entra a equipos, políticas, pipelines, tickets, revisiones y restricciones de cumplimiento.</p>
+</div></div></section>
+<section id="tensión-1.-detectar-no-es-generalizar" class="level2">
+<h2 class="anchored" data-anchor-id="tensión-1.-detectar-no-es-generalizar">Tensión 1. Detectar no es generalizar</h2>
+<p>Li et al.&nbsp;(2026) cuestionan una intuición frecuente. Un detector basado en LLM puede obtener buenos resultados en un conjunto de prueba y aun así fallar cuando enfrenta vulnerabilidades de otra distribución. La diferencia importa porque muchos conjuntos públicos tienen duplicados, etiquetas incorrectas y cobertura desigual entre CWE.</p>
+<p>El contraste empírico es fuerte. Un modelo entrenado con BigVul alcanza 0.703 de exactitud dentro de distribución, pero cae a 0.493 en la parte real de BenchVul. En un conjunto balanceado, ese valor está cerca de adivinar. En cambio, un modelo entrenado con TitanVul logra 0.590 dentro de distribución y 0.881 en datos reales de BenchVul (Li et al., 2026).</p>
+<p>La lectura no debería quedarse en cuál modelo gana. El punto es más profundo. La evaluación dentro de distribución puede premiar familiaridad con el conjunto de datos. La evaluación fuera de distribución pregunta si el modelo aprendió patrones de vulnerabilidad que viajan a nuevos proyectos, estilos de código y formas de explotación.</p>
+<div class="callout callout-style-simple callout-warning no-icon callout-titled" title="Distinción clave">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Advertencia</span>Distinción clave
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Una métrica alta puede indicar aprendizaje, pero también puede indicar fuga de datos, duplicación o una tarea de evaluación demasiado parecida al entrenamiento.</p>
+</div>
+</div>
+</section>
+<section id="tensión-2.-adoptar-no-es-confiar" class="level2">
+<h2 class="anchored" data-anchor-id="tensión-2.-adoptar-no-es-confiar">Tensión 2. Adoptar no es confiar</h2>
+<p>El estudio industrial muestra una adopción relevante. Entre quienes usan IA para gestión de vulnerabilidades, 69% reporta una experiencia positiva o muy positiva. Los practicantes valoran velocidad, cobertura y accesibilidad (Kholoosi et al., 2026).</p>
+<p>Pero esa satisfacción convive con límites claros. Los participantes reportan falsos positivos, falta de contexto, recomendaciones desalineadas con reglas internas y dudas de confianza. También describen restricciones de privacidad, costos de integración, límites de tokens y dependencia de políticas organizacionales. La herramienta puede acelerar una revisión, pero también puede crear trabajo nuevo cuando sus resultados requieren verificación cuidadosa.</p>
+<p>El hallazgo más importante para una clase de ciberseguridad es que la adopción es socio-técnica. Según Kholoosi et al.&nbsp;(2026), 80% de los participantes trata la IA como fuente de recomendaciones que requieren revisión humana. Solo 6% reporta decisiones automatizadas con mínima supervisión. Ese dato cambia el encuadre. En seguridad, usar IA de manera madura no significa delegar juicio. Significa diseñar puntos de control.</p>
+<div class="callout callout-style-simple callout-important no-icon callout-titled" title="Para discutir">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Importante</span>Para discutir
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si una herramienta de IA reduce tiempo de análisis, pero aumenta la necesidad de revisar explicaciones, parches y contexto, ¿cómo medimos realmente su productividad?</p>
+</div>
+</div>
+</section>
+<section id="tensión-3.-reparar-no-es-producir-texto-parecido-a-un-parche" class="level2">
+<h2 class="anchored" data-anchor-id="tensión-3.-reparar-no-es-producir-texto-parecido-a-un-parche">Tensión 3. Reparar no es producir texto parecido a un parche</h2>
+<p>La gestión de vulnerabilidades no termina en detectar. Un hallazgo útil debe conducir a una mitigación o corrección que preserve funcionalidad y reduzca riesgo. Han et al.&nbsp;(2026) muestran que evaluar reparación automática es especialmente delicado.</p>
+<p>En reparación automática de vulnerabilidades, se han usado métricas como Exact Match, BLEU y CodeBLEU. Estas métricas comparan la salida del modelo con un parche de referencia. El problema es que puede haber múltiples parches válidos para la misma vulnerabilidad. Un parche puede no coincidir textualmente con la referencia y aun así corregir el problema.</p>
+<p>El artículo introduce L-AVRBench, un benchmark con 70 funciones C/C++ vulnerables y suites ejecutables para evaluar funcionalidad y seguridad. En sus experimentos se generaron 7.560 parches y 131 fueron clasificados como correctos por el benchmark. De esos 131, solo 4 tuvieron Exact Match igual a 1 (Han et al., 2026). Esto muestra que una métrica textual puede subestimar reparaciones válidas.</p>
+<p>La tensión va en ambas direcciones. Una métrica textual puede castigar un parche correcto, pero una prueba funcional también puede ser insuficiente si no cubre todos los caminos de ataque. Por eso Han et al.&nbsp;(2026) complementan las pruebas automáticas con análisis manual y distinguen entre parches razonables, no funcionales, no seguros y no razonables.</p>
+</section>
+<section id="tensión-4.-los-datos-pueden-inflar-la-capacidad-aparente" class="level2">
+<h2 class="anchored" data-anchor-id="tensión-4.-los-datos-pueden-inflar-la-capacidad-aparente">Tensión 4. Los datos pueden inflar la capacidad aparente</h2>
+<p>Los tres artículos vuelven al mismo punto desde lugares distintos. La calidad de los datos condiciona lo que creemos saber sobre la IA.</p>
+<p>Li et al.&nbsp;(2026) reportan problemas severos de duplicación y etiquetado en conjuntos públicos de detección. En su proceso removieron 22.807 pares redundantes por duplicación completa y 181.183 pares donde el código vulnerable era idéntico al código corregido. También muestran una cobertura desigual, por ejemplo 5.063 muestras para CWE-20 frente a solo 39 para CWE-798 en el conjunto consolidado.</p>
+<p>Han et al.&nbsp;(2026) muestran un problema similar en reparación. Al eliminar solapamiento entre entrenamiento y prueba mediante una división cronológica, el Exact Match de VulRepair cae de 18.30% a 4.96%, y el de VulMaster de 20.47% a 5.15%. El resultado sugiere que parte del desempeño reportado podía estar midiendo memorización de parches similares, no capacidad de reparar vulnerabilidades nuevas.</p>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled" title="Lectura sugerida">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lectura sugerida
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Antes de aceptar una afirmación sobre IA para vulnerabilidades, pregunta cómo se construyó el conjunto de datos, qué duplicados se removieron, si hay fuga entre entrenamiento y prueba, y si la evaluación representa un flujo real.</p>
+</div>
+</div>
+</section>
+<section id="tensión-5.-la-ia-puede-ampliar-cobertura-y-también-ampliar-incertidumbre" class="level2">
+<h2 class="anchored" data-anchor-id="tensión-5.-la-ia-puede-ampliar-cobertura-y-también-ampliar-incertidumbre">Tensión 5. La IA puede ampliar cobertura y también ampliar incertidumbre</h2>
+<p>Una razón legítima para usar IA es la cobertura. Puede revisar más código, producir primeras explicaciones, ayudar a clasificar hallazgos y sugerir correcciones iniciales. Kholoosi et al.&nbsp;(2026) muestran que los practicantes valoran especialmente la rapidez y la integración en flujos de desarrollo. Algunos reportan uso en CI/CD, pull requests, revisión en IDE y generación de tickets.</p>
+<p>Sin embargo, ampliar cobertura no elimina incertidumbre. Un detector puede fallar en vulnerabilidades fuera de distribución. Un asistente puede producir una explicación convincente sin entender restricciones del sistema. Un reparador puede generar un parche que compila, pero rompe comportamiento esperado o deja un vector de ataque abierto.</p>
+<p>Esta es la tensión que el estudiante debe llevar al trabajo práctico. Herramientas como CodeQL, Grype o un LLM no responden la misma pregunta. CodeQL expresa consultas sobre propiedades del código. Grype contrasta componentes con bases de vulnerabilidades conocidas. Un LLM puede apoyar lectura, clasificación y generación de hipótesis. La gestión madura combina evidencia de varias fuentes y decide qué evidencia pesa más en cada caso.</p>
+</section>
+<section id="tensión-6.-automatizar-exige-diseñar-responsabilidad" class="level2">
+<h2 class="anchored" data-anchor-id="tensión-6.-automatizar-exige-diseñar-responsabilidad">Tensión 6. Automatizar exige diseñar responsabilidad</h2>
+<p>Los artículos no proponen abandonar la IA. Proponen usarla con criterios más exigentes. Li et al.&nbsp;(2026) construyen BenchVul y TitanVul para mejorar evaluación y entrenamiento. Kholoosi et al.&nbsp;(2026) recomiendan explicabilidad, conciencia de contexto, integración con flujos de trabajo y prácticas de validación. Han et al.&nbsp;(2026) recomiendan evitar fuga de datos, evaluar con particiones cronológicas y usar pruebas que midan funcionalidad y seguridad.</p>
+<p>La responsabilidad aparece en varios niveles. En el nivel técnico, hay que revisar datos, métricas, pruebas y contexto. En el nivel organizacional, hay que definir quién acepta hallazgos, quién aprueba parches, qué información puede enviarse a una herramienta externa y qué evidencia se exige antes de cerrar un ticket. En el nivel pedagógico, hay que enseñar a leer resultados de IA como afirmaciones que requieren auditoría.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Pregunta para el módulo">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Pregunta para el módulo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si incorporas IA en un flujo de gestión de vulnerabilidades, ¿dónde pondrías los puntos obligatorios de validación y qué evidencia pedirías en cada uno?</p>
+</div>
+</div>
+</section>
+<section id="implicancias-para-leer-herramientas-de-ia" class="level2">
+<h2 class="anchored" data-anchor-id="implicancias-para-leer-herramientas-de-ia">Implicancias para leer herramientas de IA</h2>
+<table class="caption-top table">
+<caption>Preguntas mínimas para discutir IA en gestión de vulnerabilidades.</caption>
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Aspecto</th>
+<th>Pregunta crítica</th>
+<th>Riesgo si se ignora</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Detección</td>
+<td>¿Se evaluó fuera de distribución?</td>
+<td>Confundir familiaridad con generalización.</td>
+</tr>
+<tr class="even">
+<td>Datos</td>
+<td>¿Hay duplicados, ruido o clases CWE subrepresentadas?</td>
+<td>Inflar métricas y ocultar fallas en debilidades raras.</td>
+</tr>
+<tr class="odd">
+<td>Adopción</td>
+<td>¿La herramienta entra como recomendación o como decisión automática?</td>
+<td>Delegar juicio sin control organizacional.</td>
+</tr>
+<tr class="even">
+<td>Contexto</td>
+<td>¿El modelo ve reglas del proyecto, arquitectura y requisitos de cumplimiento?</td>
+<td>Recibir recomendaciones plausibles pero inaplicables.</td>
+</tr>
+<tr class="odd">
+<td>Reparación</td>
+<td>¿El parche se evalúa con pruebas funcionales y de seguridad?</td>
+<td>Aceptar una corrección textual que no reduce riesgo real.</td>
+</tr>
+<tr class="even">
+<td>Gobierno</td>
+<td>¿Hay trazabilidad sobre entradas, salidas y aprobaciones?</td>
+<td>Perder responsabilidad sobre decisiones de seguridad.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="referencias" class="level2">
+<h2 class="anchored" data-anchor-id="referencias">Referencias</h2>
+<p>Han, W., Kwak, Y., Yu, M., Kim, K., Lee, Y., Moon, H., &amp; Paek, Y. (2026). <em>Rethinking the capability of fine-tuned language models for automated vulnerability repair</em>. En <em>2026 IEEE/ACM 48th International Conference on Software Engineering (ICSE ’26)</em>. ACM. https://doi.org/10.1145/3744916.3773167</p>
+<p>Kholoosi, M. M., Le, T. H. M., &amp; Babar, M. A. (2026). <em>Software vulnerability management in the era of artificial intelligence: An industry perspective</em>. En <em>Proceedings of 2026 IEEE/ACM International Conference on Software Engineering (ICSE ’26)</em>. ACM. https://doi.org/10.48550/arXiv.2512.18261</p>
+<p>Li, Y., Bui, N. T., Zhang, T., Yang, C., Zhou, X., Weyssow, M., Jiang, J., Chen, J., Huang, H., Nguyen, H. H., Ho, C. Y., Tan, J., Li, R., Yin, Y., Ang, H. W., Liauw, F., Ouh, E. L., Shar, L. K., &amp; Lo, D. (2026). <em>Out of distribution, out of luck: How well can LLMs trained on vulnerability datasets detect Top 25 CWE weaknesses?</em> arXiv. https://doi.org/10.48550/arXiv.2507.21817</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/dci-courses\.github\.io\/ciberseguridad_2026");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dci-courses/ciberseguridad_2026/issues/new" class="toc-action"><i class="bi bi-github"></i>Informar sobre problema</a></li></ul></div></div></div></footer></body></html>
