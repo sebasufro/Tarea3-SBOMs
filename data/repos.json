@@ -1,5 +1,44 @@
 {
     "repositories": [
-        {}
+        {
+            "url": "https://github.com/fastlane/docs.git",
+            "path": "data/repos/docs",
+            "ref": "master"
+        },
+        {
+            "url": "https://github.com/fastlane/fastlane.git",
+            "path": "data/repos/fastlane",
+            "ref": "master"
+        },
+        {
+            "url": "https://github.com/fastlane/fastlane.tools.git",
+            "path": "data/repos/fastlane.tools",
+            "ref": "master"
+        },
+        {
+            "url": "https://github.com/fastlane/fastlane-sirp.git",
+            "path": "data/repos/fastlane-sirp",
+            "ref": "master"
+        },
+        {
+            "url": "https://github.com/fastlane/codesigning.guide.git",
+            "path": "data/repos/codesigning.guide",
+            "ref": "gh-pages"
+        },
+        {
+            "url": "https://github.com/fastlane/frameit-frames.git",
+            "path": "data/repos/frameit-frames",
+            "ref": "gh-pages"
+        },
+        {
+            "url": "https://github.com/fastlane/github-actions.git",
+            "path": "data/repos/github-actions",
+            "ref": "master"
+        },
+        {
+            "url": "https://github.com/fastlane/docker.git",
+            "path": "data/repos/docker",
+            "ref": "master"
+        }
     ]
 }

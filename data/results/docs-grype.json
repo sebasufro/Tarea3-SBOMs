@@ -1,0 +1,82 @@
+{
+  "total_vulnerabilities": 6,
+  "vulnerabilities_by_severity": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 6
+  },
+  "vulnerabilities": [
+    {
+      "package_name": "jinja2",
+      "current_version": "3.1.4",
+      "vuln_id": "GHSA-gmj6-6f8f-6699",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Jinja has a sandbox breakout through malicious filenames",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "jinja2",
+      "current_version": "3.1.4",
+      "vuln_id": "GHSA-q2x7-8rv6-6q7h",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Jinja has a sandbox breakout through indirect reference to format method",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "markdown",
+      "current_version": "3.6",
+      "vuln_id": "GHSA-5wmx-573v-2qwq",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Python-Markdown has an Uncaught Exception",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "jinja2",
+      "current_version": "3.1.4",
+      "vuln_id": "GHSA-cpwx-vrp4-4pq7",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Jinja2 vulnerable to sandbox breakout through attr filter selecting format method",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "addressable",
+      "current_version": "2.8.9",
+      "vuln_id": "GHSA-h27x-rffw-24p4",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Addressable has a Regular Expression Denial of Service in Addressable templates",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "pymdown-extensions",
+      "current_version": "10.8.1",
+      "vuln_id": "GHSA-r6h4-mm7h-8pmq",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "PyMdown Extensions has a ReDOS bug in its Figure Capture extension",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    }
+  ],
+  "grype_metadata": {
+    "grype_version": "unknown",
+    "db_location": "",
+    "scanned_path": "/workspaces/Tarea3-SBOMs/data/repos/docs"
+  }
+}

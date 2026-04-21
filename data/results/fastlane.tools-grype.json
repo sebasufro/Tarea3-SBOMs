@@ -1,0 +1,401 @@
+{
+  "total_vulnerabilities": 35,
+  "vulnerabilities_by_severity": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 35
+  },
+  "vulnerabilities": [
+    {
+      "package_name": "gitpython",
+      "current_version": "3.1.3",
+      "vuln_id": "GHSA-hcpj-qp55-gfph",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "GitPython vulnerable to Remote Code Execution due to improper user input validation",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "werkzeug",
+      "current_version": "1.0.1",
+      "vuln_id": "GHSA-2g68-c3qc-8985",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Werkzeug debugger vulnerable to remote execution when interacting with attacker controlled domain",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "requests",
+      "current_version": "2.26.0",
+      "vuln_id": "GHSA-j8r2-6x86-q33q",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Unintended leak of Proxy-Authorization header in requests",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "werkzeug",
+      "current_version": "1.0.1",
+      "vuln_id": "GHSA-f9vj-2wh5-fj8j",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Werkzeug safe_join not safe on Windows",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "urllib3",
+      "current_version": "1.26.5",
+      "vuln_id": "GHSA-v845-jxx5-vc9f",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "`Cookie` HTTP header isn't stripped on cross-origin redirects",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "werkzeug",
+      "current_version": "1.0.1",
+      "vuln_id": "GHSA-q34m-jh98-gwm2",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Werkzeug possible resource exhaustion when parsing file data in forms",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "jinja2",
+      "current_version": "2.11.3",
+      "vuln_id": "GHSA-h75v-3vvj-5mfj",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "gitpython",
+      "current_version": "3.1.3",
+      "vuln_id": "GHSA-pr76-5cm5-w9cj",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "GitPython vulnerable to remote code execution due to insufficient sanitization of input arguments",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "werkzeug",
+      "current_version": "1.0.1",
+      "vuln_id": "GHSA-hrfv-mqp8-q5rw",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Werkzeug DoS: High resource usage when parsing multipart/form-data containing a large part with CR/LF character at the beginning",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "gitpython",
+      "current_version": "3.1.3",
+      "vuln_id": "GHSA-wfm5-v35h-vwf4",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "GitPython untrusted search path on Windows systems leading to arbitrary code execution",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "gitpython",
+      "current_version": "3.1.3",
+      "vuln_id": "GHSA-2mqj-m65w-jghx",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Untrusted search path under some conditions on Windows allows arbitrary code execution",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "werkzeug",
+      "current_version": "1.0.1",
+      "vuln_id": "GHSA-xg9f-g7g7-2323",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "High resource usage when parsing multipart form data with many fields",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "jinja2",
+      "current_version": "2.11.3",
+      "vuln_id": "GHSA-q2x7-8rv6-6q7h",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Jinja has a sandbox breakout through indirect reference to format method",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "markdown",
+      "current_version": "3.3.4",
+      "vuln_id": "GHSA-5wmx-573v-2qwq",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Python-Markdown has an Uncaught Exception",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "gitpython",
+      "current_version": "3.1.3",
+      "vuln_id": "GHSA-cwvm-v4w8-q58c",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "GitPython blind local file inclusion",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "webob",
+      "current_version": "1.8.6",
+      "vuln_id": "GHSA-mg3v-6m49-jhp3",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "WebOb's location header normalization during redirect leads to open redirect",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "urllib3",
+      "current_version": "1.26.5",
+      "vuln_id": "GHSA-34jh-p97f-mpxf",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "urllib3's Proxy-Authorization request header isn't stripped during cross-origin redirects",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "requests",
+      "current_version": "2.26.0",
+      "vuln_id": "GHSA-9hjg-9r4m-mvj7",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Requests vulnerable to .netrc credentials leak via malicious URLs",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "certifi",
+      "current_version": "2020.4.5.2",
+      "vuln_id": "GHSA-xqr8-7jwr-rhp7",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Removal of e-Tugra root certificate",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "jinja2",
+      "current_version": "2.11.3",
+      "vuln_id": "GHSA-h5c8-rqwp-cp95",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "werkzeug",
+      "current_version": "1.0.1",
+      "vuln_id": "GHSA-px8h-6qxv-m22q",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Incorrect parsing of nameless cookies leads to __Host- cookies bypass",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "jinja2",
+      "current_version": "2.11.3",
+      "vuln_id": "GHSA-cpwx-vrp4-4pq7",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Jinja2 vulnerable to sandbox breakout through attr filter selecting format method",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "urllib3",
+      "current_version": "1.26.5",
+      "vuln_id": "GHSA-pq67-6m6q-mj2v",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "urllib3 redirects are not disabled when retries are disabled on PoolManager instantiation",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "pygments",
+      "current_version": "2.7.4",
+      "vuln_id": "GHSA-mrwq-x4v8-fh7p",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Pygments vulnerable to ReDoS",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "certifi",
+      "current_version": "2020.4.5.2",
+      "vuln_id": "GHSA-43fp-rhv2-5gv8",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Certifi removing TrustCor root certificate",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "urllib3",
+      "current_version": "1.26.5",
+      "vuln_id": "GHSA-gm62-xv2j-4w53",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "urllib3 allows an unbounded number of links in the decompression chain",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "urllib3",
+      "current_version": "1.26.5",
+      "vuln_id": "GHSA-2xpw-w6gg-jr37",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "urllib3 streaming API improperly handles highly compressed data",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "urllib3",
+      "current_version": "1.26.5",
+      "vuln_id": "GHSA-g4mx-q9vg-27p4",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "urllib3's request body not stripped after redirect from 303 status changes request method to GET",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "requests",
+      "current_version": "2.26.0",
+      "vuln_id": "GHSA-9wx4-h78v-vm56",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Requests `Session` object does not verify requests after making first request with verify=False",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "urllib3",
+      "current_version": "1.26.5",
+      "vuln_id": "GHSA-38jv-5279-wg99",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Decompression-bomb safeguards bypassed when following HTTP redirects (streaming API)",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "werkzeug",
+      "current_version": "1.0.1",
+      "vuln_id": "GHSA-hgf8-39gv-g3f2",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Werkzeug safe_join() allows Windows special device names",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "werkzeug",
+      "current_version": "1.0.1",
+      "vuln_id": "GHSA-87hc-h4r5-73f7",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Werkzeug safe_join() allows Windows special device names with compound extensions",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "werkzeug",
+      "current_version": "1.0.1",
+      "vuln_id": "GHSA-29vq-49wr-vm6x",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Werkzeug safe_join() allows Windows special device names",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "pygments",
+      "current_version": "2.7.4",
+      "vuln_id": "GHSA-5239-wwwm-4pmq",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Pygments has Regular Expression Denial of Service (ReDoS) due to Inefficient Regex for GUID Matching",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "requests",
+      "current_version": "2.26.0",
+      "vuln_id": "GHSA-gc5v-m9x4-r6x2",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Requests has Insecure Temp File Reuse in its extract_zipped_paths() utility function",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    }
+  ],
+  "grype_metadata": {
+    "grype_version": "unknown",
+    "db_location": "",
+    "scanned_path": "/workspaces/Tarea3-SBOMs/data/repos/fastlane.tools"
+  }
+}

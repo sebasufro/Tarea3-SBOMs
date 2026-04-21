@@ -1,0 +1,192 @@
+{
+  "total_vulnerabilities": 16,
+  "vulnerabilities_by_severity": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 16
+  },
+  "vulnerabilities": [
+    {
+      "package_name": "yard",
+      "current_version": "0.9.26",
+      "vuln_id": "GHSA-8mq4-9jjh-9xrc",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "YARD's default template vulnerable to Cross-site Scripting in generated frames.html",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "sinatra",
+      "current_version": "2.2.4",
+      "vuln_id": "GHSA-hxx2-7vcw-mqr3",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Sinatra vulnerable to Reliance on Untrusted Inputs in a Security Decision",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "sinatra",
+      "current_version": "2.2.4",
+      "vuln_id": "GHSA-mr3q-g2mv-mr4q",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Sinatra is vulnerable to ReDoS through ETag header value generation",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "webrick",
+      "current_version": "1.8.1",
+      "vuln_id": "GHSA-6f62-3596-g6w7",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "HTTP Request Smuggling in ruby webrick",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "rack",
+      "current_version": "2.2.22",
+      "vuln_id": "GHSA-8vqr-qjwx-82mw",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Rack's multipart parsing without Content-Length header allows unbounded chunked file uploads",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "addressable",
+      "current_version": "2.8.7",
+      "vuln_id": "GHSA-h27x-rffw-24p4",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Addressable has a Regular Expression Denial of Service in Addressable templates",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "webrick",
+      "current_version": "1.8.1",
+      "vuln_id": "GHSA-r995-q44h-hr64",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Ruby WEBrick read_headers method can lead to HTTP Request/Response Smuggling",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "rack",
+      "current_version": "2.2.22",
+      "vuln_id": "GHSA-v569-hp3g-36wr",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Rack has quadratic complexity in Rack::Utils.select_best_encoding via wildcard Accept-Encoding header",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "rack",
+      "current_version": "2.2.22",
+      "vuln_id": "GHSA-h2jq-g4cq-5ppq",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Rack::Static prefix matching can expose unintended files under the static root",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "rack",
+      "current_version": "2.2.22",
+      "vuln_id": "GHSA-x8cg-fq8g-mxfx",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Rack's multipart byte range processing allows denial of service via excessive overlapping ranges",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "rack",
+      "current_version": "2.2.22",
+      "vuln_id": "GHSA-qv7j-4883-hwh7",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Rack::Sendfile header-based X-Accel-Mapping regex injection enables unauthorized X-Accel-Redirect",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "rack",
+      "current_version": "2.2.22",
+      "vuln_id": "GHSA-q4qf-9j86-f5mh",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Rack:: Static header_rules bypass via URL-encoded paths",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "rack",
+      "current_version": "2.2.22",
+      "vuln_id": "GHSA-7mqq-6cf9-v2qp",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Rack has a root directory disclosure via unescaped regex interpolation in Rack::Directory",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "rack",
+      "current_version": "2.2.22",
+      "vuln_id": "GHSA-q2ww-5357-x388",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Rack has Content-Length mismatch in Rack::Files error responses",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "rack",
+      "current_version": "2.2.22",
+      "vuln_id": "GHSA-vgpv-f759-9wx3",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "Rack's greedy multipart boundary parsing can cause parser differentials and WAF bypass.",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    },
+    {
+      "package_name": "yard",
+      "current_version": "0.9.26",
+      "vuln_id": "GHSA-3jfp-46x4-xgfj",
+      "vuln_severity": "low",
+      "fix_version": "N/A",
+      "message": "yard: Possible arbitrary path traversal and file access via yard server",
+      "cwe": "N/A",
+      "cvss_score": 0,
+      "type": "vulnerability"
+    }
+  ],
+  "grype_metadata": {
+    "grype_version": "unknown",
+    "db_location": "",
+    "scanned_path": "/workspaces/Tarea3-SBOMs/data/repos/fastlane"
+  }
+}
